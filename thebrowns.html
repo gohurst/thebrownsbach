@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Browns Bach Trip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="dog.jpg" alt="Ben and Syd's Pup" class="header-dog-img">
+        <div class="header-text">
+            <h1>Cheers to Ben & Syd!</h1>
+            <p>The Joint Bachelor & Bachelorette Bash — Monterey, TN</p>
+        </div>
+    </div>
+</header>
+
+<section id="countdown-container">
+    <h2>Days Until the Trip:</h2>
+    <div id="timer">
+        <span id="days">00</span> days
+        <span id="hours">00</span> hours
+        <span id="minutes">00</span> minutes
+    </div>
+</section>
+
+<section id="couple-photos">
+    <div class="photo-grid">
+        <div class="photo-card">
+            <img src="syd-ben-1.jpg" alt="Syd and Ben 1">
+        </div>
+        <div class="photo-card">
+            <img src="syd-ben-2.jpg" alt="Syd and Ben 2">
+        </div>
+    </div>
+</section>
+
+<section id="itinerary">
+    <h2>The Game Plan</h2>
+
+    <div class="day">
+        <h3>Friday: Arrival</h3>
+        <p>Arrive at the cabin and get settled in (claim rooms, meet everyone, etc.)</p>
+        <p>Have dinner, play games, celebrate Ben and Syd!</p>
+    </div>
+
+    <div class="day">
+        <h3>Saturday: Party Time!</h3>
+        <p>Wake up and eat breakfast (cure hangovers)</p>
+        <p>Play games, celebrate The Browns, have fun, eat dinner</p>
+    </div>
+
+    <div class="day">
+        <h3>Sunday: Adios!</h3>
+        <p>Wake up and eat breakfast</p>
+        <p>Head back to our respective homes and start the countdown to July!</p>
+    </div>
+</section>
+
+<script>
+    // Set the date we're counting down to
+    const tripDate = new Date("March 20, 2026 16:00:00").getTime();
+
+    const countdown = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = tripDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        // These now match the updated IDs above
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.getElementById("timer").innerHTML = "THE TRIP IS HERE!";
+        }
+    }, 1000);
+</script>
+
+<section id="photo-dump">
+    <div class="dump-container">
+        <h2>Capture the Memories</h2>
+        <p>Upload all your favorite shots from the weekend so Ben and Syd can keep them forever!</p>
+        
+        <a href="https://drive.google.com/drive/folders/1cnoOpJpGDnfG0YMku8oeXknahmPwApWv?usp=drive_link" class="upload-button" target="_blank">
+            <span>📸</span> Upload Photos Here
+        </a>
+    </div>
+</section>
+
+</body>
+</html>

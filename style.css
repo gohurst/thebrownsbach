@@ -1,0 +1,214 @@
+/* Earthy Green Theme */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #2d3436; /* Soft charcoal for readability */
+    background-color: #f0f4f0; /* Very pale sage background */
+}
+
+header {
+    background: #3e563f; /* Deep Forest Green */
+    color: #ffffff;
+    padding: 4rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid #8ba888; /* Sage accent border */
+}
+
+header h1 {
+    font-family: 'Georgia', serif; /* A more elegant font for the names */
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+#countdown-container {
+    text-align: center;
+    background: #5b7052; /* Muted Moss Green */
+    color: white;
+    padding: 1.5rem;
+    box-shadow: inset 0 -5px 10px rgba(0,0,0,0.05);
+}
+
+#timer span {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+section {
+    padding: 3rem 1.5rem;
+    max-width: 850px;
+    margin: auto;
+}
+
+.day {
+    background-color: #ffffff; /* Crisp white for the itinerary boxes */
+    color: #2d3436;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 8px solid #8ba888; /* Sage accent stripe on the side */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.day h3 {
+    color: #3e563f;
+    margin-top: 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Button & RSVP Form */
+button {
+    background: #5b7052;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #3e563f; /* Darkens on hover */
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ccd5cc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+#itinerary h2 {
+    color: #3e563f; /* Dark Forest Green */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#couple-photos {
+    padding: 2rem 1rem;
+    background-color: #f0f4f0; /* Matches your pale sage background */
+}
+
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Keeps it looking good on phones */
+}
+
+.photo-card {
+    background: white;
+    padding: 10px 10px 30px 10px; /* Thicker bottom for that Polaroid look */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: rotate(-2deg); /* Adds a cute, casual tilt */
+}
+
+/* Tilts the second photo the other way for variety */
+.photo-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.photo-card img {
+    width: 100%;
+    max-width: 300px; /* Keeps them from getting too huge */
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.day h3 {
+    color: #5b7052; /* Muted Moss Green */
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* This makes them nice and legible */
+}
+#photo-dump {
+    background-color: #3e563f; /* Deep Forest Green */
+    color: white;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.dump-container h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dump-container p {
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.upload-button {
+    display: inline-block;
+    background-color: #8ba888; /* Sage Green */
+    color: #ffffff;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.upload-button:hover {
+    background-color: #5b7052; /* Darkens to Moss on hover */
+    transform: translateY(-3px); /* Cute little lift effect */
+}
+
+.upload-button span {
+    margin-right: 10px;
+}
+header {
+    background: #3e563f; /* Deep Forest Green */
+    color: #ffffff;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center; /* Centers everything */
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Space between the dog and the text */
+    max-width: 900px;
+    text-align: left; /* Aligns text to the left of the container */
+}
+
+.header-dog-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    border: 4px solid #ffffff; /* Adds that crisp white "frame" */
+    object-fit: cover; /* Prevents the photo from looking squished */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.header-text h1 {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+.header-text p {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Mobile Tweak: Stacks them vertically on small screens */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
